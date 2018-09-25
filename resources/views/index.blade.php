@@ -584,18 +584,19 @@
                                 </div>
                             </div>
                         </div>
-
-
                     </form> <!-- Form End -->
 
-                    <!-- contact-warning -->
-                    <div id="message-warning"></div>
+                    @if (!empty($error_message))
+                        <div id="message-warning">
+                           {{ $error_message }}
+                        </div>
+                    @endif
 
-                    <!-- contact-success -->
-                    <div id="message-success">
-                        <i class="fa fa-check"></i>Your message was sent, thank you!<br>
-                    </div>
-
+                    @if (!empty($success_message))
+                        <div id="message-success">
+                            <i class="fa fa-check"></i>{{$success_message}}<br>
+                        </div>
+                    @endif
                 </div> <!-- end col-twelve -->
             </div> <!-- end row contact-form -->
 
